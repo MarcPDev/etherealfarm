@@ -1623,8 +1623,8 @@ function getBerryCost(i) {
 
 function getBerryProd(i) {
   var seeds = getBerryBase(i);
-  seeds.mulrInPlace(2);
-  if(i == 0) seeds.mulrInPlace(2);
+  seeds.mulrInPlace(12);
+  if(i == 0) seeds.mulrInPlace(12);
   seeds.mulInPlace(Num.rpow(3.35, Num(i)));
   return Res({seeds:seeds});
 }
@@ -1632,7 +1632,7 @@ function getBerryProd(i) {
 
 function getMushroomCost(i) {
   // Mushrooms start after berry 1, and then appear after every 2 berries.
-  return getBerryCost(1.5 + i * 2);
+  return getBerryCost(1.5 + i * 1);
 }
 
 function getMushroomProd(i) {
