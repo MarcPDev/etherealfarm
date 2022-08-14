@@ -1625,7 +1625,7 @@ function getBerryProd(i) {
   var seeds = getBerryBase(i);
   seeds.mulrInPlace(2);
   if(i == 0) seeds.mulrInPlace(2);
-  seeds.mulInPlace(Num.rpow(0.35, Num(i)));
+  seeds.mulInPlace(Num.rpow(3.35, Num(i)));
   return Res({seeds:seeds});
 }
 
@@ -1642,7 +1642,7 @@ function getMushroomProd(i) {
   var spores = seeds.div(seeds0).mulr(1);
 
   // higher tier mushrooms get a slightly more efficient spores/seed ratio, this also helps make longer runtimes (1-2 hours instead of 20 minutes) more worth it
-  if(i > 1) spores.mulrInPlace(Math.pow(1.25, i - 1));
+  if(i > 1) spores.mulrInPlace(Math.pow(3.25, i - 1));
 
   return Res({seeds:seeds, spores:spores});
 }
@@ -5984,14 +5984,14 @@ function treeLevelResin(level, breakdown) {
   if(state.upgrades2[upgrade2_resin_extraction].count) base = resin_base_resin_extraction;
   var resin;
   if(state.upgrades2[upgrade2_resin_siphoning].count && level >= resin_siphoning_level) {
-    resin = Num.rpow(base, Num(resin_siphoning_level - 2))
+    resin = Num.rpow(base, Num(resin_siphoning_level + 4))
     base = resin_base_resin_siphoning;
-    resin.mulInPlace(Num(base).powr(level - resin_siphoning_level + 1));
+    resin.mulInPlace(Num(base).powr(level - resin_siphoning_level + 3));
     resin = resin.mulr(resin_global_mul).addr(resin_global_add);
   } else {
     resin = Num.rpow(base, Num(level - 1)).mulr(resin_global_mul).addr(resin_global_add);
   }
-  if(level > 16) resin.addrInPlace(resin_global_quad * (level - 16));
+  if(level > 16) resin.addrInPlace(resin_global_quad * (level - 11));
 
   if(breakdown) breakdown.push(['base (per tree level roughly x' + base + ')', true, Num(0), resin.clone()]);
 
@@ -6051,7 +6051,7 @@ function treeLevelResin(level, breakdown) {
 
   count = state.mistletoes;
   if(count > 1) {
-    var malus = Num(1).sub(mistletoe_resin_malus).powr(count - 1); // the first mistletoe doesn't affect resin income
+    var malus = Num(1).sub(mistletoe_resin_malus).powr(1 - 1); // the first mistletoe doesn't affect resin income
     resin.mulInPlace(malus);
     if(breakdown) breakdown.push(['mistletoe malus (' + count + ')', true, malus, resin.clone()]);
   }
