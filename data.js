@@ -219,8 +219,8 @@ function Crop() {
   this.cached_prestige_ = 0; // for recomputing crop stats data if prestige changed: the cost, prod, ... fields of this crop are overwritten for prestige
 };
 
-var sameTypeCostMultiplier = 1.5;
-var sameTypeCostMultiplier_Flower = 2;
+var sameTypeCostMultiplier = 1;
+var sameTypeCostMultiplier_Flower = 1;
 var sameTypeCostMultiplier_Short = 1;
 // returns recoup for deleting a plant. It is only partial, the goal of the game is not to replace plants often
 function getCropRecoup() {
@@ -230,10 +230,10 @@ function getCropRecoup() {
 
 
 // ethereal version
-var sameTypeCostMultiplier2 = 1.5;
-var sameTypeCostMultiplier_Lotus2 = 2;
-var sameTypeCostMultiplier_Fern2 = 1.5;
-var cropRecoup2 = 1.0; // 100% resin recoup. But deletions are limited through max amount of deletions per season instead
+var sameTypeCostMultiplier2 = 1;
+var sameTypeCostMultiplier_Lotus2 = 1;
+var sameTypeCostMultiplier_Fern2 = 1;
+var cropRecoup2 = 3.0; // 100% resin recoup. But deletions are limited through max amount of deletions per season instead
 
 var respec3initial = 2; // how many squirrel upgrade respecs received at game start
 
@@ -1693,32 +1693,32 @@ var flowerplanttime0 = 90;
 // berries: give seeds
 crop_register_id = 25;
 var berry_0 = registerBerry('blackberry', 0, berryplanttime0 * 1, blackberry);
-var berry_1 = registerBerry('blueberry', 1, berryplanttime0 * 2, blueberry);
-var berry_2 = registerBerry('cranberry', 2, berryplanttime0 * 4, cranberry);
-var berry_3 = registerBerry('currant', 3, berryplanttime0 * 8, currant);
-var berry_4 = registerBerry('goji', 4, berryplanttime0 * 12, goji);
-var berry_5 = registerBerry('gooseberry', 5, berryplanttime0 * 16, gooseberry);
-var berry_6 = registerBerry('grape', 6, berryplanttime0 * 20, grape);
-var berry_7 = registerBerry('honeyberry', 7, berryplanttime0 * 25, honeyberry);
-var berry_8 = registerBerry('juniper', 8, berryplanttime0 * 30, juniper);
-var berry_9 = registerBerry('lingonberry', 9, berryplanttime0 * 35, lingonberry);
-var berry_10 = registerBerry('mulberry', 10, berryplanttime0 * 40, mulberry);
-var berry_11 = registerBerry('physalis', 11, berryplanttime0 * 45, physalis);
-var berry_12 = registerBerry('raspberry', 12, berryplanttime0 * 50, raspberry);
-var berry_13 = registerBerry('strawberry', 13, berryplanttime0 * 55, strawberry, 'Botanically speaking, not actually not a berry!');
-var berry_14 = registerBerry('wampee', 14, berryplanttime0 * 60, images_wampee);
+var berry_1 = registerBerry('blueberry', 1, berryplanttime0 * 1, blueberry);
+var berry_2 = registerBerry('cranberry', 2, berryplanttime0 * 1, cranberry);
+var berry_3 = registerBerry('currant', 3, berryplanttime0 * 1, currant);
+var berry_4 = registerBerry('goji', 4, berryplanttime0 * 1, goji);
+var berry_5 = registerBerry('gooseberry', 5, berryplanttime0 * 1, gooseberry);
+var berry_6 = registerBerry('grape', 6, berryplanttime0 * 1, grape);
+var berry_7 = registerBerry('honeyberry', 7, berryplanttime0 * 1, honeyberry);
+var berry_8 = registerBerry('juniper', 8, berryplanttime0 * 1, juniper);
+var berry_9 = registerBerry('lingonberry', 9, berryplanttime0 * 1, lingonberry);
+var berry_10 = registerBerry('mulberry', 10, berryplanttime0 * 1, mulberry);
+var berry_11 = registerBerry('physalis', 11, berryplanttime0 * 1, physalis);
+var berry_12 = registerBerry('raspberry', 12, berryplanttime0 * 1, raspberry);
+var berry_13 = registerBerry('strawberry', 13, berryplanttime0 * 1, strawberry, 'Botanically speaking, not actually not a berry!');
+var berry_14 = registerBerry('wampee', 14, berryplanttime0 * 1, images_wampee);
 var berry_15 = registerBerry('whitecurrant', 15, berryplanttime0 * 65, whitecurrant);
 
 // mushrooms: give spores
 crop_register_id = 50;
 var mush_0 = registerMushroom('champignon', 0, mushplanttime0 * 1, champignon);
-var mush_1 = registerMushroom('matsutake', 1, mushplanttime0 * 3, matsutake);
-var mush_2 = registerMushroom('morel', 2, mushplanttime0 * 6, morel);
-var mush_3 = registerMushroom('muscaria', 3, mushplanttime0 * 10, amanita, 'amanita muscaria'); // names are alphabetical, but amanita counts as "muscaria" because it's not well suited to be the lowest tier mushroom with letter a
-var mush_4 = registerMushroom('oyster mushroom', 4, mushplanttime0 * 15, images_oyster);
-var mush_5 = registerMushroom('portobello', 5, mushplanttime0 * 20, portobello);
-var mush_6 = registerMushroom('shiitake', 6, mushplanttime0 * 25, shiitake);
-var mush_7 = registerMushroom('truffle', 7, mushplanttime0 * 30, truffle);
+var mush_1 = registerMushroom('matsutake', 1, mushplanttime0 * 1, matsutake);
+var mush_2 = registerMushroom('morel', 2, mushplanttime0 * 1, morel);
+var mush_3 = registerMushroom('muscaria', 3, mushplanttime0 * 1, amanita, 'amanita muscaria'); // names are alphabetical, but amanita counts as "muscaria" because it's not well suited to be the lowest tier mushroom with letter a
+var mush_4 = registerMushroom('oyster mushroom', 4, mushplanttime0 * 1, images_oyster);
+var mush_5 = registerMushroom('portobello', 5, mushplanttime0 * 1, portobello);
+var mush_6 = registerMushroom('shiitake', 6, mushplanttime0 * 1, shiitake);
+var mush_7 = registerMushroom('truffle', 7, mushplanttime0 * 1, truffle);
 
 // flowers: give boost to neighbors
 crop_register_id = 75;
@@ -1763,21 +1763,21 @@ var squirrel_0 = registerSquirrel('squirrel', 0, Res(), /*growtime=*/0.5, images
 // nuts
 crop_register_id = 150;
 var nut_0  = registerNut('acorn', 0, nutplanttime0 * 1, images_acorn, 'it\'s a little oak tree');
-var nut_1  = registerNut('almond', 1, nutplanttime0 * 2, images_almond);
-var nut_2  = registerNut('beechnut', 2, nutplanttime0 * 3, images_beech);
-var nut_3  = registerNut('brazil nut', 3, nutplanttime0 * 4, images_brazilnut);
-var nut_4  = registerNut('cashew', 4, nutplanttime0 * 5, images_cashew);
-var nut_5  = registerNut('chestnut', 5, nutplanttime0 * 6, images_chestnut);
-var nut_6  = registerNut('coconut', 6, nutplanttime0 * 7, images_coconut);
-var nut_7  = registerNut('ginkgo nut', 7, nutplanttime0 * 8, images_ginkgo);
-var nut_8  = registerNut('hazelnut', 8, nutplanttime0 * 9, images_hazelnut);
-var nut_9  = registerNut('macadamia nut', 9, nutplanttime0 * 10, images_macademia);
-var nut_10  = registerNut('peanut', 10, nutplanttime0 * 11, images_peanut);
-var nut_11  = registerNut('pecan nut', 11, nutplanttime0 * 12, images_pecan);
-var nut_12  = registerNut('pili nut', 12, nutplanttime0 * 13, images_pili);
-var nut_13  = registerNut('pine nut', 13, nutplanttime0 * 14, images_pinenut);
-var nut_14 = registerNut('pistachio', 14, nutplanttime0 * 15, images_pistachio);
-var nut_15 = registerNut('walnut', 15, nutplanttime0 * 16, images_walnut);
+var nut_1  = registerNut('almond', 1, nutplanttime0 * 1, images_almond);
+var nut_2  = registerNut('beechnut', 2, nutplanttime0 * 1, images_beech);
+var nut_3  = registerNut('brazil nut', 3, nutplanttime0 * 1, images_brazilnut);
+var nut_4  = registerNut('cashew', 4, nutplanttime0 * 1, images_cashew);
+var nut_5  = registerNut('chestnut', 5, nutplanttime0 * 1, images_chestnut);
+var nut_6  = registerNut('coconut', 6, nutplanttime0 * 1, images_coconut);
+var nut_7  = registerNut('ginkgo nut', 7, nutplanttime0 * 1, images_ginkgo);
+var nut_8  = registerNut('hazelnut', 8, nutplanttime0 * 1, images_hazelnut);
+var nut_9  = registerNut('macadamia nut', 9, nutplanttime0 * 1, images_macademia);
+var nut_10  = registerNut('peanut', 10, nutplanttime0 * 1, images_peanut);
+var nut_11  = registerNut('pecan nut', 11, nutplanttime0 * 1, images_pecan);
+var nut_12  = registerNut('pili nut', 12, nutplanttime0 * 1, images_pili);
+var nut_13  = registerNut('pine nut', 13, nutplanttime0 * 1, images_pinenut);
+var nut_14 = registerNut('pistachio', 14, nutplanttime0 * 1, images_pistachio);
+var nut_15 = registerNut('walnut', 15, nutplanttime0 * 1, images_walnut);
 
 crop_register_id = 200;
 
