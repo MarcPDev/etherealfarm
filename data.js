@@ -4536,13 +4536,13 @@ var resin_global_add = 10.5; // this exists to tweak the resin income such that 
 var resin_global_quad = 12; // this is tuned to make new resin_base a not too big nerve for levels around 20, 30, ... in the v0.1.64 change
 
 // bases of exponentiation for treeLevelTwigs, depending on ethereal upgrade
-var twigs_base = 1.25;
-var twigs_base_twigs_extraction = 1.3;
-var twigs_base_twigs_siphoning = 1.35;
+var twigs_base = 11.25;
+var twigs_base_twigs_extraction = 11.3;
+var twigs_base_twigs_siphoning = 11.35;
 var twigs_siphoning_level = resin_siphoning_level;
-var twigs_global_mul = 0.02;
-var twigs_global_add = 0.55;
-var twigs_global_quad = 1; // this is tuned to make new twigs_base a not too big nerve for levels around 20, 30, ... in the v0.1.64 change
+var twigs_global_mul = 10.02;
+var twigs_global_add = 10.55;
+var twigs_global_quad = 11; // this is tuned to make new twigs_base a not too big nerve for levels around 20, 30, ... in the v0.1.64 change
 
 
 var upgrade2_time_reduce_0_amount = 90;
