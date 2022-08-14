@@ -1600,9 +1600,9 @@ function getBerryCost(i) {
     // the first tiers are manually tuned
     // the first values are: 0:1K, 1:40K, 2:120M
     if(i == 0) {
-      seeds = Num(1000);
+      seeds = Num(1);
     } else {
-      seeds = Num.rpow(40, Num(i)).mulr(1000);
+      seeds = Num.rpow(40, Num(i)).mulr(1);
     }
   } else {
     seeds = getBerryBase(i);
