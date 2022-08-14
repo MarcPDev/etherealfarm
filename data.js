@@ -2034,14 +2034,14 @@ function setCropMultiplierCosts(u, crop) {
   var softcap_base = Num(1);
   if(crop.type == CROPTYPE_BERRY) {
     cost0 = getBerryCost(tier).mulr(basic_upgrade_initial_cost);
-    cost1 = getBerryCost(tier + 1).mulr(basic_upgrade_initial_cost / 40);
+    cost1 = getBerryCost(tier).mulr(basic_upgrade_initial_cost / 40);
     // berry production goes x700 per tier (to verify: crops[berry_5].prod.seeds.div(crops[berry_4].prod.seeds).toString() etc...)
     // each upgrade adds 25% (multiplicative), and 1.25^29 is the last value below 700
     upgrade_steps = 29;
     softcap_base = Num(1.005);
   } else if(crop.type == CROPTYPE_MUSH) {
     cost0 = getMushroomCost(tier).mulr(basic_upgrade_initial_cost);
-    cost1 = getMushroomCost(tier + 1).mulr(basic_upgrade_initial_cost / 400);
+    cost1 = getMushroomCost(tier).mulr(basic_upgrade_initial_cost / 400);
     // mushroom production goes x123K per tier (to verify: crops[mush_5].prod.spores.div(crops[mush_4].prod.spores).toString() etc...)
     // each upgrade adds 25% (multiplicative), and 1.25^52 is the last value below 123K
     upgrade_steps = 52;
@@ -2049,7 +2049,7 @@ function setCropMultiplierCosts(u, crop) {
     //softcap_base = Num(1);
   } else if(crop.type == CROPTYPE_NUT) {
     cost0 = getNutCost(tier);
-    cost1 = getNutCost(tier + 1);
+    cost1 = getNutCost(tier);
     upgrade_steps = nut_upgrade_steps;
     softcap_base = Num(1.0025);
   }
