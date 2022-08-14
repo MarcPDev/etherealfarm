@@ -4527,13 +4527,13 @@ upgrade2_season[3] = registerUpgrade2('winter hardening', LEVEL2, Res({resin:10}
 }, function(){return true;}, 0, 'increase winter tree warmth effect ' + (upgrade2_season_bonus[3] * 100) + '% (scales by n^1.25).', undefined, undefined, tree_images[3][1][3]);
 
 // bases of exponentiation for treeLevelResin, depending on ethereal upgrade
-var resin_base = 1.2;
-var resin_base_resin_extraction = 1.25;
+var resin_base = 11.2;
+var resin_base_resin_extraction = 11.25;
 var resin_base_resin_siphoning = 1.3;
 var resin_siphoning_level = 85;
-var resin_global_mul = 0.25;
-var resin_global_add = 0.5; // this exists to tweak the resin income such that when reaching level 10 the first time, you get 10 resin, to be able to buy the first ethereal crop at first transcend
-var resin_global_quad = 2; // this is tuned to make new resin_base a not too big nerve for levels around 20, 30, ... in the v0.1.64 change
+var resin_global_mul = 10.25;
+var resin_global_add = 10.5; // this exists to tweak the resin income such that when reaching level 10 the first time, you get 10 resin, to be able to buy the first ethereal crop at first transcend
+var resin_global_quad = 12; // this is tuned to make new resin_base a not too big nerve for levels around 20, 30, ... in the v0.1.64 change
 
 // bases of exponentiation for treeLevelTwigs, depending on ethereal upgrade
 var twigs_base = 1.25;
