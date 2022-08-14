@@ -1590,7 +1590,7 @@ function registerChallengeCrop(name, tier, cost, planttime, image, opt_tagline) 
 
 // should return 1 for i=0
 function getBerryBase(i) {
-  return Num.rpow(2000, Num(i));
+  return Num.rpow(1, Num(i));
 }
 
 
