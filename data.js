@@ -233,7 +233,7 @@ function getCropRecoup() {
 var sameTypeCostMultiplier2 = 1;
 var sameTypeCostMultiplier_Lotus2 = 1;
 var sameTypeCostMultiplier_Fern2 = 1;
-var cropRecoup2 = 3.0; // 100% resin recoup. But deletions are limited through max amount of deletions per season instead
+var cropRecoup2 = 300.0; // 100% resin recoup. But deletions are limited through max amount of deletions per season instead
 
 var respec3initial = 2; // how many squirrel upgrade respecs received at game start
 
