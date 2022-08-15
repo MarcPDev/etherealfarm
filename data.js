@@ -1685,10 +1685,10 @@ function getBeeCost(i) {
   return getFlowerCost(3 + i * 4 + 0.15);
 }
 
-var berryplanttime0 = 60;
-var mushplanttime0 = 60;
-var nutplanttime0 = 60;
-var flowerplanttime0 = 90;
+var berryplanttime0 = 6;
+var mushplanttime0 = 6;
+var nutplanttime0 = 6;
+var flowerplanttime0 = 9;
 
 // berries: give seeds
 crop_register_id = 25;
@@ -1723,13 +1723,13 @@ var mush_7 = registerMushroom('truffle', 7, mushplanttime0 * 1, truffle);
 // flowers: give boost to neighbors
 crop_register_id = 75;
 var flower_0 = registerFlower('anemone', 0, getFlowerBoost(0), flowerplanttime0, images_anemone);
-var flower_1 = registerFlower('clover', 1, getFlowerBoost(1), flowerplanttime0 * 3, images_clover);
-var flower_2 = registerFlower('cornflower', 2, getFlowerBoost(2), flowerplanttime0 * 6, images_cornflower);
-var flower_3 = registerFlower('daisy', 3, getFlowerBoost(3), flowerplanttime0 * 9, images_daisy);
-var flower_4 = registerFlower('dandelion', 4, getFlowerBoost(4), flowerplanttime0 * 12, images_dandelion);
-var flower_5 = registerFlower('iris', 5, getFlowerBoost(5), flowerplanttime0 * 15, images_iris);
-var flower_6 = registerFlower('lavender', 6, getFlowerBoost(6), flowerplanttime0 * 18, images_lavender);
-var flower_7 = registerFlower('orchid', 7, getFlowerBoost(7), flowerplanttime0 * 21, images_orchid);
+var flower_1 = registerFlower('clover', 1, getFlowerBoost(1), flowerplanttime0 * 1, images_clover);
+var flower_2 = registerFlower('cornflower', 2, getFlowerBoost(2), flowerplanttime0 * 1, images_cornflower);
+var flower_3 = registerFlower('daisy', 3, getFlowerBoost(3), flowerplanttime0 * 1, images_daisy);
+var flower_4 = registerFlower('dandelion', 4, getFlowerBoost(4), flowerplanttime0 * 1, images_dandelion);
+var flower_5 = registerFlower('iris', 5, getFlowerBoost(5), flowerplanttime0 * 1, images_iris);
+var flower_6 = registerFlower('lavender', 6, getFlowerBoost(6), flowerplanttime0 * 1, images_lavender);
+var flower_7 = registerFlower('orchid', 7, getFlowerBoost(7), flowerplanttime0 * 1, images_orchid);
 
 
 crop_register_id = 100;
