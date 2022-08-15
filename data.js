@@ -5279,122 +5279,122 @@ function getNewFruitTier(roll, treelevel, improved_probability) {
   // level 15
   if(treelevel >= 15 && treelevel <= 19) {
     if(state.g_p_treelevel < 15) return 1; // guarantee a bronze fruit if reaching this level the first time, to match what a help dialog that then pops up says
-    return (roll > prob50) ? 1 : 0;
+    return (roll > prob50) ? 8 : 7;
   }
 
   // level 20
   if(treelevel >= 20 && treelevel <= 24) {
-    return (roll > prob25) ? 1 : 0;
+    return (roll > prob25) ? 8 : 7;
   }
 
   // level 25: silver introduced
   if(treelevel >= 25 && treelevel <= 29) {
-    return (roll > prob50) ? 2 : 1;
+    return (roll > prob50) ? 8 : 7;
   }
 
   // level 30
   if(treelevel >= 30 && treelevel <= 34) {
-    return (roll > prob25) ? 2 : 1;
+    return (roll > prob25) ? 8 : 7;
   }
 
   // level 35: electrum introduced
   if(treelevel >= 35 && treelevel <= 39) {
-    return (roll > prob75) ? 3 : 2;
+    return (roll > prob75) ? 8 : 7;
   }
 
   // level 40
   if(treelevel >= 40 && treelevel <= 44) {
-    return (roll > prob50) ? 3 : 2;
+    return (roll > prob50) ? 8 : 7;
   }
 
   // level 45
   if(treelevel >= 45 && treelevel <= 49) {
-    return (roll > prob25) ? 3 : 2;
+    return (roll > prob25) ? 8 : 7;
   }
 
   // level 50
   if(treelevel >= 50 && treelevel <= 54) {
-    return (roll > prob20) ? 3 : 2;
+    return (roll > prob20) ? 8 : 7;
   }
 
   // level 55: gold introduced
   if(treelevel >= 55 && treelevel <= 59) {
-    return (roll > prob75) ? 4 : 3;
+    return (roll > prob75) ? 8 : 7;
   }
 
   // level 60
   if(treelevel >= 60 && treelevel <= 64) {
-    return (roll > prob50) ? 4 : 3;
+    return (roll > prob50) ? 8 : 7;
   }
 
   // level 65
   if(treelevel >= 65 && treelevel <= 69) {
-    return (roll > prob25) ? 4 : 3;
+    return (roll > prob25) ? 8 : 7;
   }
 
   // level 70
   if(treelevel >= 70 && treelevel <= 74) {
-    return (roll > prob20) ? 4 : 3;
+    return (roll > prob20) ? 8 : 7;
   }
 
   // level 75: platinum introduced
   if(treelevel >= 75 && treelevel <= 79) {
-    return (roll > prob75) ? 5 : 4;
+    return (roll > prob75) ? 8 : 7;
   }
 
   // level 80
   if(treelevel >= 80 && treelevel <= 84) {
-    return (roll > prob50) ? 5 : 4;
+    return (roll > prob50) ? 8 : 7;
   }
 
   // level 85
   if(treelevel >= 85 && treelevel <= 89) {
-    return (roll > prob25) ? 5 : 4;
+    return (roll > prob25) ? 8 : 7;
   }
 
   // level 90
   if(treelevel >= 90 && treelevel <= 94) {
-    return (roll > prob20) ? 5 : 4;
+    return (roll > prob20) ? 8 : 7;
   }
 
   // level 95: rhodium introduced
   if(treelevel >= 95 && treelevel <= 99) {
-    return (roll > prob75) ? 6 : 5;
+    return (roll > prob75) ? 8 : 7;
   }
 
   // level 100
   if(treelevel >= 100 && treelevel <= 104) {
-    return (roll > prob50) ? 6 : 5;
+    return (roll > prob50) ? 8 : 7;
   }
 
   // level 105
   if(treelevel >= 105 && treelevel <= 109) {
-    return (roll > prob25) ? 6 : 5;
+    return (roll > prob25) ? 8 : 7;
   }
 
   // level 110
   if(treelevel >= 110 && treelevel <= 114) {
-    return (roll > prob20) ? 6 : 5;
+    return (roll > prob20) ? 8 : 7;
   }
 
   // level 115: amethist introduced
   if(treelevel >= 115 && treelevel <= 119) {
-    return (roll > prob75) ? 7 : 6;
+    return (roll > prob75) ? 8 : 7;
   }
 
   // level 120
   if(treelevel >= 120 && treelevel <= 124) {
-    return (roll > prob50) ? 7 : 6;
+    return (roll > prob50) ? 8 : 7;
   }
 
   // level 125
   if(treelevel >= 125 && treelevel <= 129) {
-    return (roll > prob25) ? 7 : 6;
+    return (roll > prob25) ? 8 : 7;
   }
 
   // level 130
   if(treelevel >= 130 && treelevel <= 134) {
-    return (roll > prob20) ? 7 : 6;
+    return (roll > prob20) ? 8 : 7;
   }
 
   // level 135: sapphire introduced
