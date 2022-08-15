@@ -6940,7 +6940,7 @@ function getUpgrade3Cost(i) {
     if(i == 0) return Num(0);
     i--;
     // the last one of evolution 0 costs 1e42, but given the set-back after squirrel reset that's very hard to reach now, 1e39 is quite a bit more reachable
-    var result = Num(20).powr(i).mulr(1e39);
+    var result = Num(20).powr(i).mulr(1e9);
     return result;
   }
   return Num(Infinity);
